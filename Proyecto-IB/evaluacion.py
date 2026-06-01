@@ -23,11 +23,12 @@ def calcular_metricas(resultados_obtenidos, qrels_reales, top_k=10):
     
     return precision, recall, ap
 
-def ejecutar_evaluacion():
+def ejecutar_evaluacion(motor=None):
     archivo_corpus = './data/ModApte_train.csv'
     
     print("Cargando motor y procesando índices (esto tomará unos momentos)...")
-    motor = MotorRecuperacion(archivo_corpus)
+    if motor is None:
+        motor = MotorRecuperacion(archivo_corpus)
     
     df = pd.read_csv(archivo_corpus)
     df['title'] = df['title'].fillna("No Title")
