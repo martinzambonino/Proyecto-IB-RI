@@ -425,7 +425,14 @@ Los vectores se normalizan con L2 para que el producto interno funcione como sim
 Este modelo puede recuperar documentos relacionados por significado, aunque no compartan exactamente las mismas palabras con la consulta.
 
 ---
+## 15. Decisiones de diseño
 
+- **BM25 k1=1.5, b=0.75**: valores estándar de la literatura; b=0.75 penaliza documentos largos sin eliminar su aporte.
+- **Modelo de embeddings `all-MiniLM-L6-v2`**: equilibrio entre velocidad y calidad semántica para corpus en inglés de tamaño mediano.
+- **FAISS IndexFlatIP**: búsqueda exacta por producto interno; apropiado dado el tamaño del corpus.
+- **Índice invertido en Jaccard y BM25**: reduce candidatos antes de calcular scores, mejora eficiencia.
+
+---
 ## 14. Índice invertido
 
 El sistema construye un índice invertido con la estructura:
