@@ -479,7 +479,7 @@ def ejecutar_cli():
 
             try:
                 from evaluacion import ejecutar_evaluacion
-                ejecutar_evaluacion()
+                ejecutar_evaluacion(motor)
             except Exception as error:
                 print()
                 print("Ocurrió un error al ejecutar la evaluación.")
