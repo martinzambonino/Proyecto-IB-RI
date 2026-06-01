@@ -102,13 +102,13 @@ faiss-cpu
 Desde una terminal, ejecutar:
 
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 Si el sistema usa `python3` y `pip3`, ejecutar:
 
 ```bash
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ---
