@@ -425,7 +425,7 @@ Los vectores se normalizan con L2 para que el producto interno funcione como sim
 Este modelo puede recuperar documentos relacionados por significado, aunque no compartan exactamente las mismas palabras con la consulta.
 
 ---
-## 15. Decisiones de diseño
+## 14. Decisiones de diseño
 
 - **BM25 k1=1.5, b=0.75**: valores estándar de la literatura; b=0.75 penaliza documentos largos sin eliminar su aporte.
 - **Modelo de embeddings `all-MiniLM-L6-v2`**: equilibrio entre velocidad y calidad semántica para corpus en inglés de tamaño mediano.
@@ -433,7 +433,7 @@ Este modelo puede recuperar documentos relacionados por significado, aunque no c
 - **Índice invertido en Jaccard y BM25**: reduce candidatos antes de calcular scores, mejora eficiencia.
 
 ---
-## 14. Índice invertido
+## 15. Índice invertido
 
 El sistema construye un índice invertido con la estructura:
 
@@ -459,7 +459,7 @@ El índice invertido se usa para recuperar documentos candidatos en modelos basa
 
 ---
 
-## 15. Diferencia entre búsqueda libre y evaluación
+## 16. Diferencia entre búsqueda libre y evaluación
 
 La búsqueda libre sirve para usar el sistema como buscador.
 
@@ -488,7 +488,7 @@ Consulta libre → muestra resultados.
 
 ---
 
-## 16. Ejemplo de uso
+## 17. Ejemplo de uso
 
 Ejecutar el sistema:
 
@@ -522,7 +522,7 @@ Buscar> :salir
 
 ---
 
-## 17. Notas importantes
+## 18. Notas importantes
 
 - El sistema no usa Elasticsearch, Solr ni Whoosh.
 - La recuperación semántica usa FAISS.
@@ -533,7 +533,7 @@ Buscar> :salir
 
 ---
 
-## 18. Posibles problemas
+## 19. Posibles problemas
 
 ### Error: no se encontró el archivo del corpus
 
@@ -574,7 +574,7 @@ la advertencia no impide ejecutar el proyecto.
 
 ---
 
-## 19. Autores
+## 20. Autores
 
 Proyecto realizado por:
 
