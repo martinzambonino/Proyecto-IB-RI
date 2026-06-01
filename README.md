@@ -102,13 +102,13 @@ faiss-cpu
 Desde una terminal, ejecutar:
 
 ```bash
-pip install pandas numpy scikit-learn sentence-transformers faiss-cpu
+pip install requirements.txt
 ```
 
 Si el sistema usa `python3` y `pip3`, ejecutar:
 
 ```bash
-pip3 install pandas numpy scikit-learn sentence-transformers faiss-cpu
+pip3 install requirements.txt
 ```
 
 ---
